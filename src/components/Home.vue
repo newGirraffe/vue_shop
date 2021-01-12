@@ -7,6 +7,9 @@
         <span>电商后台管理系统</span>
       </div>
       <el-button type="info" @click="logout">退出</el-button>
+			<!-- ---------------------- -->
+			<!-- <el-button type='info' @click='logout'>退出</el-button> -->
+			<!-- ----------------------------- -->
     </el-header>
     <!-- 页面主体区域 -->
     <el-container>
@@ -74,6 +77,13 @@ export default {
       window.sessionStorage.clear()
       this.$router.push('/login')
     },
+	// ---------------------------
+	// logout() {
+	// 	window.sessionStorage.clear()
+	// 	this.$router.push('/login')
+	// }
+	// --------------------------
+	
     // 获取所有的菜单
     async getMenuList() {
       const { data: res } = await this.$http.get('menus')

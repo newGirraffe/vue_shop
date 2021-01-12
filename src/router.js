@@ -71,3 +71,12 @@ router.beforeEach((to, from, next) => {
 })
 
 export default router
+// ---------------------------------------------
+// router.beforeEach((to,from, next)=> {
+// 	 if (to.path ==='/login') return next()
+// 	 const tokenStr = window.sessionStorage.getItem('token')
+// 	 if (!tokenStr) return next('/login')
+// 	 next()
+// })
+
+// export default router 
